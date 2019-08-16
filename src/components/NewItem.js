@@ -8,7 +8,7 @@ class NewItem extends React.Component {
           type="text"
           id="new-task-input"
           placeholder="Task.."
-          autoComplete="false"
+          autoComplete="off"
         />
         <input type="number" id="new-time-input" placeholder="Mins.." />
         <button className="btn btn-success" onClick={this.add.bind(this)}>
