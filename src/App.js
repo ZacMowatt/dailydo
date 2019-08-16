@@ -74,7 +74,12 @@ class App extends React.Component {
     if (item.title !== "") {
       if (this.state.editMode) {
         return (
-          <EditItem key={item.id} item={item} updateItem={this.updateItem} />
+          <EditItem
+            key={item.id}
+            item={item}
+            updateItem={this.updateItem}
+            remove={this.remove}
+          />
         );
       } else {
         return <Item key={item.id} item={item} updateTime={this.updateTime} />;
@@ -130,7 +135,7 @@ class App extends React.Component {
         //item.time = toUpdate.time;
       }
     });
-    //this.setState({ items: items });
+    this.setState({ items: items });
     cookies.set("items", items, { maxAge: 60 * 60 * 24 * 365 * 5 });
   };
 
@@ -140,6 +145,15 @@ class App extends React.Component {
     } else {
       this.setState({ editMode: true });
     }
+  };
+
+  remove = toRemove => {
+    console.log("Item to remove: ", toRemove);
+    var items = this.state.items;
+    var index = items.indexOf(toRemove);
+    items.splice(index, 1);
+    this.setState({ items: items });
+    cookies.set("items", items, { maxAge: 60 * 60 * 24 * 365 * 5 });
   };
 }
 
