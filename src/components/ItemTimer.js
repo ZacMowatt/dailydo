@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 class ItemTimer extends React.Component {
   state = { done: false, time: 0 };
@@ -13,13 +15,21 @@ class ItemTimer extends React.Component {
   render() {
     return this.state.done ? (
       <div className="item-timer">
-        <div className="time-box">Complete</div>
+        <div className="time-box text-success">Complete</div>
       </div>
     ) : (
       <div className="item-timer">
-        <button onClick={this.decrement.bind(this)}>down</button>
+        <FontAwesomeIcon
+          className="icon text-info"
+          icon={faSortDown}
+          onClick={this.decrement.bind(this)}
+        />
         <div className="time-box">{this.state.remaining}</div>
-        <button onClick={this.done.bind(this)}>done</button>
+        <FontAwesomeIcon
+          className="icon text-success"
+          icon={faCheck}
+          onClick={this.done.bind(this)}
+        />
       </div>
     );
   }

@@ -25,7 +25,7 @@ class EditItem extends React.Component {
           value={this.state.item.time}
           onChange={this.timeChanged.bind(this)}
         />
-        <button onClick={this.update.bind(this)}>Update</button>
+
         <button onClick={() => this.props.remove(this.state.item)}>
           Remove
         </button>

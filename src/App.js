@@ -122,21 +122,22 @@ class App extends React.Component {
     cookies.set("items", items, { maxAge: 60 * 60 * 24 * 365 * 5 });
   };
 
-  updateItem = toUpdate => {
+  updateItem = () => {
     var items = this.state.items;
     items.forEach(function(item) {
-      if (item.id === toUpdate.id) {
-        //item.title = toUpdate.title;
-        //if (item.remaining >= item.time) item.remaining = toUpdate.time;
-        //item.time = toUpdate.time;
-      }
+      //if (item.id === toUpdate.id) {
+      //item.title = toUpdate.title;
+      //if (item.remaining >= item.time) item.remaining = toUpdate.time;
+      //item.time = toUpdate.time;
+      //}
     });
-    this.setState({ items: items });
+    //this.setState({ items: items });
     cookies.set("items", items, { maxAge: 60 * 60 * 24 * 365 * 5 });
   };
 
   edit = () => {
     if (this.state.editMode) {
+      this.updateItem();
       this.setState({ editMode: false });
     } else {
       this.setState({ editMode: true });

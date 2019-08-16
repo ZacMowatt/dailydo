@@ -49,15 +49,13 @@ input {
 button:hover {
   color: peru;
 }
+
+.time-box {
+  font-weight: 600;
+}
 .App {
   text-align: center;
   position: relative;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .list-container {
@@ -72,4 +70,18 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.icon {
+  padding: 0 10px;
+}
+
+.text-primary {
+  color: #007bff;
+}
+.text-info {
+  color: #17a2b8;
+}
+.text-success {
+  color: #28a745;
 }

@@ -5,7 +5,7 @@ class NewItem extends React.Component {
     return (
       <div className="item new-item">
         <input type="text" id="new-task-input" placeholder="Task.." />
-        <input type="number" id="new-time-input" placeholder="10" />
+        <input type="number" id="new-time-input" placeholder="Mins/day.." />
         <button onClick={this.add.bind(this)}>Add</button>
       </div>
     );
