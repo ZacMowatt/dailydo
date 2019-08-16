@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinusCircle, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 class EditItem extends React.Component {
   constructor(props) {
@@ -25,8 +27,10 @@ class EditItem extends React.Component {
           value={this.state.item.time}
           onChange={this.timeChanged.bind(this)}
         />
-
-        <button onClick={() => this.props.remove(this.state.item)}>
+        <button
+          className="btn btn-danger"
+          onClick={() => this.props.remove(this.state.item)}
+        >
           Remove
         </button>
       </div>

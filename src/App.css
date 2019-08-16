@@ -13,7 +13,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 80%;
   background: #3e4042;
   padding: 10px;
   border-radius: 10px;
@@ -26,14 +26,15 @@ h1 {
 
 #task-input,
 #new-task-input {
-  width: 50%;
-  flex: 5;
+  width: 40%;
+  flex: 3.5;
 }
 #time-input,
 #new-time-input {
   width: 10%;
-  flex: 2;
+  flex: 1.5;
 }
+
 input {
   font-size: calc(14px + 2vmin);
 }
@@ -76,6 +77,19 @@ button:hover {
   padding: 0 10px;
 }
 
+.btn {
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  flex: 1;
+}
+.btn-danger {
+  background: #dc3545 !important;
+}
+.btn-success {
+  background: #28a745;
+}
 .text-primary {
   color: #007bff;
 }
@@ -84,4 +98,7 @@ button:hover {
 }
 .text-success {
   color: #28a745;
+}
+.text-warning {
+  color: #ffc107;
 }

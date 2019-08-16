@@ -5,8 +5,10 @@ class NewItem extends React.Component {
     return (
       <div className="item new-item">
         <input type="text" id="new-task-input" placeholder="Task.." />
-        <input type="number" id="new-time-input" placeholder="Mins/day.." />
-        <button onClick={this.add.bind(this)}>Add</button>
+        <input type="number" id="new-time-input" placeholder="Mins.." />
+        <button className="btn btn-success" onClick={this.add.bind(this)}>
+          Add
+        </button>
       </div>
     );
   }

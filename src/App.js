@@ -4,6 +4,8 @@ import Cookies from "universal-cookie";
 import Item from "./components/Item";
 import NewItem from "./components/NewItem";
 import EditItem from "./components/EditItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faSave } from "@fortawesome/free-solid-svg-icons";
 
 const cookies = new Cookies();
 class App extends React.Component {
@@ -95,9 +97,19 @@ class App extends React.Component {
           {this.state.items.map(this.createItem)}
           {this.state.editMode ? <NewItem add={this.newItem} /> : ""}
         </div>
-        <div className="edit" onClick={this.edit.bind(this)}>
-          Edit
-        </div>
+        {this.state.editMode ? (
+          <FontAwesomeIcon
+            icon={faSave}
+            className="edit text-primary"
+            onClick={this.edit.bind(this)}
+          />
+        ) : (
+          <FontAwesomeIcon
+            icon={faEdit}
+            className="edit text-primary"
+            onClick={this.edit.bind(this)}
+          />
+        )}
       </div>
     );
   }
