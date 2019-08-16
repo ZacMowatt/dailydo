@@ -3,7 +3,7 @@ import React from "react";
 class EditItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { item: [] };
+    this.state = { item: { title: "", time: "" } };
   }
 
   componentDidMount() {

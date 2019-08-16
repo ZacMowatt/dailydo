@@ -123,14 +123,10 @@ class App extends React.Component {
   };
 
   updateItem = toUpdate => {
-    console.log("Update item");
-    console.log("To update: ", toUpdate);
-    console.log("Items: ", this.state.items[0]);
     var items = this.state.items;
     items.forEach(function(item) {
       if (item.id === toUpdate.id) {
         //item.title = toUpdate.title;
-        console.log("remaining: " + item.remaining + " time: " + item.time);
         //if (item.remaining >= item.time) item.remaining = toUpdate.time;
         //item.time = toUpdate.time;
       }
@@ -148,7 +144,6 @@ class App extends React.Component {
   };
 
   remove = toRemove => {
-    console.log("Item to remove: ", toRemove);
     var items = this.state.items;
     var index = items.indexOf(toRemove);
     items.splice(index, 1);
