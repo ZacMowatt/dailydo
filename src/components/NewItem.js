@@ -4,7 +4,12 @@ class NewItem extends React.Component {
   render() {
     return (
       <div className="item new-item">
-        <input type="text" id="new-task-input" placeholder="Task.." />
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="Task.."
+          autoComplete="false"
+        />
         <input type="number" id="new-time-input" placeholder="Mins.." />
         <button className="btn btn-success" onClick={this.add.bind(this)}>
           Add

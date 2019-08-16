@@ -20,6 +20,7 @@ class EditItem extends React.Component {
           id="task-input"
           value={this.state.item.title}
           onChange={this.titleChanged.bind(this)}
+          autoComplete="false"
         />
         <input
           type="number"
