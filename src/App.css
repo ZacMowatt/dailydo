@@ -80,9 +80,10 @@ button:hover {
 .btn {
   border: none;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
-  flex: 1;
+  flex: 1.5;
+  font-size: calc(9px + 2vmin);
 }
 .btn-danger {
   background: #dc3545 !important;

@@ -100,13 +100,13 @@ class App extends React.Component {
         {this.state.editMode ? (
           <FontAwesomeIcon
             icon={faSave}
-            className="edit text-primary"
+            className="edit text-info"
             onClick={this.edit.bind(this)}
           />
         ) : (
           <FontAwesomeIcon
             icon={faEdit}
-            className="edit text-primary"
+            className="edit text-info"
             onClick={this.edit.bind(this)}
           />
         )}
